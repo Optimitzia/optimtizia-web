@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimtizia - Solucions de Ciberseguretat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="images/logo-final.svg" alt="Logo Final Optimtizia">
+                <span>Optimtizia</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#serveis">Serveis</a></li>
+                <li><a href="#nosaltres">Sobre Nosaltres</a></li>
+                <li><a href="#contacte">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1>Fortificant el teu món digital.</h1>
+                <p class="subtitle">Solucions de ciberseguretat intel·ligents i a mida per protegir els teus actius més valuosos.</p>
+                <a href="#contacte" class="cta-button">Demana una consulta</a>
+            </div>
+        </section>
+
+        <section id="serveis" class="services">
+            <div class="container">
+                <h2>Els Nostres Serveis Principals</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="images/icona-prevencio.svg" alt="Icona Prevenció d'Amenaces" class="service-icon">
+                        <h3>Anàlisi i Prevenció d'Amenaces</h3>
+                        <p>Realitzem auditories de seguretat exhaustives, anàlisi de vulnerabilitats i dissenyem plans de prevenció per anticipar-nos als atacs.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/icona-cloud.svg" alt="Icona Infraestructura Cloud Segura" class="service-icon">
+                        <h3>Infraestructura Cloud Segura</h3>
+                        <p>Dissenyem, implementem i mantenim arquitectures cloud robustes i segures a plataformes com GCP, AWS i Azure, garantint la integritat de les teves dades.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/icona-forense.svg" alt="Icona Resposta a Incidents" class="service-icon">
+                        <h3>Resposta a Incidents i Anàlisi Forense</h3>
+                        <p>En cas d'un incident de seguretat, gestionem la crisi, contenim l'amenaça i realitzem una anàlisi forense per determinar l'origen i l'abast de l'atac.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosaltres" class="about">
+            <div class="container">
+                <h2>Sobre Nosaltres</h2>
+                <p>Optimtizia neix de la passió per la tecnologia i la seguretat. El nostre equip està format per experts certificats amb anys d'experiència en la protecció d'infraestructures digitals. La nostra missió és simple: oferir tranquil·litat als nostres clients, sabent que el seu entorn digital està protegit amb les millors eines i pràctiques del sector.</p>
+            </div>
+        </section>
+
+        <section id="contacte" class="contact">
+            <div class="container">
+                <h2>Contacta'ns</h2>
+                <p>Estàs preparat per portar la teva seguretat al següent nivell? Omple el formulari i ens posarem en contacte amb tu.</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="El teu nom" required>
+                        <input type="email" id="email" name="email" placeholder="El teu email" required>
+                    </div>
+                    <textarea name="message" id="message" placeholder="El teu missatge" required></textarea>
+                    <button type="submit" class="cta-button">Envia el Missatge</button>
+                </form>
+                <p id="form-response" class="form-response"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Optimtizia. Tots els drets reservats.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

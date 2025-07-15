@@ -1,0 +1,227 @@
+:root {
+    --primary-bg: #0A192F;
+    --secondary-bg: #112240;
+    --text-light: #CCD6F6;
+    --text-dark: #8892B0;
+    --accent-color: #ADFF2F;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.header {
+    background-color: rgba(10, 25, 47, 0.85);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--secondary-bg);
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-left: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Header height */
+}
+
+.hero h1 {
+    color: var(--text-light);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.cta-button {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Services Section */
+.services, .about, .contact {
+    padding: 6rem 0;
+}
+
+.services h2, .about h2, .contact h2 {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* About Section */
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--text-dark);
+    border-radius: 4px;
+    color: var(--text-light);
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    color: var(--text-dark);
+}
+
+.contact textarea {
+    height: 150px;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.contact .cta-button {
+    align-self: center;
+    cursor: pointer;
+}
+
+.form-response {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-bg);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
