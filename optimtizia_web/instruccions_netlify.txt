@@ -1,0 +1,34 @@
+Instruccions per al desplegament de "optimtizia-web" a Netlify:
+
+Problema inicial: La pàgina web mostrava un error "Page not found" (404) i "Auto Publishing Locked" a Netlify.
+
+Passos per a la resolució:
+
+1.  **Activar els "Builds" a Netlify:**
+    *   Accedir a la configuració del projecte a Netlify (Secció "Build & deploy" -> "Continuous deployment").
+    *   Assegurar-se que l'opció "Build status" estigui configurada com a "Active builds". (Això va resoldre el problema de "Auto Publishing Locked").
+
+2.  **Configurar el "Publish directory" a Netlify:**
+    *   A la mateixa secció de "Build & deploy settings" a Netlify.
+    *   Establir el "Publish directory" a `./` (arrel del projecte).
+
+3.  **Afegir el fitxer de configuració `netlify.toml`:**
+    *   Crear un fitxer anomenat `netlify.toml` a l'arrel de la carpeta `optimtizia_web` amb el següent contingut:
+        ```toml
+        [build]
+          publish = "."
+        ```
+    *   Pujar aquest canvi al repositori de GitHub amb les comandes:
+        ```bash
+        git add .
+        git commit -m "Afegit fitxer de configuració netlify.toml"
+        git push
+        ```
+
+4.  **Configurar el "Base directory" a Netlify:**
+    *   A la secció "Build & deploy settings" a Netlify.
+    *   Canviar el valor de "Base directory" de `/` a `optimtizia_web`. (Això va ser crucial perquè el fitxer `index.html` estava dins de la subcarpeta `optimtizia_web` al repositori).
+
+Després de cada canvi de configuració a Netlify o de pujar canvis a GitHub, Netlify va iniciar un nou desplegament. Calia esperar que aquest desplegament passés a l'estat "Published" abans de comprovar la URL.
+
+URL del lloc web: `https://delicate-nasturtium-0b960b.netlify.app/`

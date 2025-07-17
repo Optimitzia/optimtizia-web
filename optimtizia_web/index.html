@@ -68,7 +68,11 @@
             <div class="container">
                 <h2>Contacta'ns</h2>
                 <p>Estàs preparat per portar la teva seguretat al següent nivell? Omple el formulari i ens posarem en contacte amb tu.</p>
-                <form id="contact-form">
+                <form id="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p class="hidden">
+                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="El teu nom" required>
                         <input type="email" id="email" name="email" placeholder="El teu email" required>
