@@ -3,16 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const formResponse = document.getElementById('form-response');
 
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Evitem que el formulari s'enviï de la manera tradicional
+        // Netlify s'encarregarà de l'enviament del formulari
+        // No cal e.preventDefault() ni la lògica de simulació aquí
 
-        // Simulem un enviament
-        const name = document.getElementById('name').value;
-        formResponse.textContent = `Gràcies, ${name}. Hem rebut el teu missatge!`;
-
-        // Netegem el formulari
+        // Opcional: Pots mantenir la neteja del formulari si vols
         contactForm.reset();
 
-        // Esborrem el missatge després de 5 segons
+        // Opcional: Pots mostrar un missatge de confirmació si vols
+        formResponse.textContent = 'El teu missatge ha estat enviat. Gràcies!';
         setTimeout(() => {
             formResponse.textContent = '';
         }, 5000);
