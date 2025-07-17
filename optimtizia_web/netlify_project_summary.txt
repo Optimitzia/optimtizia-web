@@ -1,0 +1,30 @@
+Resum del Projecte Netlify i Resolució de Problemes
+
+Data del resum: 15 de juliol de 2025
+
+1. Objectiu Principal:
+*   Desplegar la pàgina web `optimtizia-web` a Netlify perquè sigui accessible públicament.
+
+2. Informació del Projecte:
+*   Nom del projecte local: `optimtizia_web` (ubicat a `C:\Users\sebas\AppData\Local\Google\Cloud SDK\optimtizia_web`)
+*   Repositori GitHub: `https://github.com/Optimitzia/optimtizia-web.git`
+*   Nom del projecte a Netlify: `delicate-nasturtium-0b960b`
+*   URL esperada del lloc a Netlify: `https://delicate-nasturtium-0b960b.netlify.app/`
+
+3. Problema Inicial:
+*   La pàgina web no es mostrava a Netlify, mostrant un error de "Page not found" (404), tot i que el desplegament semblava "Published".
+*   La previsualització del lloc a Netlify també mostrava un error.
+
+4. Passos de Diagnòstic i Solució Aplicats:
+*   Verificació de sincronització Git: Es va confirmar que els fitxers locals estaven sincronitzats amb el repositori de GitHub.
+*   Configuració del "Publish directory" a Netlify: Es va identificar que el "Publish directory" estava "Not set". Es va instruir a l'usuari per canviar-lo a `./` (arrel del projecte).
+*   Revisió dels logs de desplegament: Els logs complets van mostrar que el desplegament es va completar amb èxit ("Site is live ✨"), sense errors aparents durant la construcció o el desplegament.
+*   Problema de URL: Es va aclarir que la URL correcta del lloc és `https://delicate-nasturtium-0b960b.netlify.app/`, no la versió traduïda o la URL de configuració de Netlify.
+*   Forçar un nou desplegament: Davant la persistència del 404 malgrat els logs exitosos, es va decidir forçar un nou desplegament per resoldre possibles problemes de memòria cau o sincronització interna de Netlify.
+    *   Es va modificar el fitxer `index.html` localment (afegint "(Test Deploy)" al peu de pàgina).
+    *   Es va instruir a l'usuari per realitzar manualment els comandaments `git add index.html`, `git commit -m "Forcing Netlify redeploy: Added test text to footer"`, i `git push origin main` des del seu terminal.
+
+5. Estat Actual:
+*   L'usuari ha executat els comandaments `git add`, `git commit`, `git push` des del seu terminal.
+*   Netlify hauria d'estar processant un nou desplegament automàticament.
+*   Acció pendent per l'usuari: Comprovar l'estat del nou desplegament a Netlify i, un cop "Published", provar d'accedir a `https://delicate-nasturtium-0b960b.netlify.app/` en mode incògnit.
